@@ -126,52 +126,47 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
             margin: 0 auto;
           }
 
-          /* КЛИКАБЕЛЬНЫЙ ЗАГОЛОВОК */
+          /* КЛИКАБЕЛЬНАЯ КНОПКА-ЗАГОЛОВОК */
           .why-me-dropdown__toggle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: block;
             width: 100%;
-            padding: 20px 0;
-            background: transparent;
-            border: none;
-            border-bottom: 2px solid rgba(169, 139, 99, 0.2);
+            padding: 20px 30px;
+            background: #ffffff;
+            border: 2px solid #a98b63;
+            border-radius: 60px;
             cursor: pointer;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(169, 139, 99, 0.1);
           }
 
           .why-me-dropdown__toggle:hover {
-            border-bottom-color: #a98b63;
+            background: #a98b63;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(169, 139, 99, 0.3);
           }
 
           .why-me-dropdown__toggle-text {
-            font-size: 36px;
+            font-size: 32px;
             font-weight: 600;
             color: #1f1f1f;
-            text-align: left;
+            transition: color 0.3s ease;
           }
 
-          .why-me-dropdown__toggle-icon {
-            font-size: 42px;
-            color: #a98b63;
-            font-weight: 300;
-            transition: transform 0.3s ease;
-          }
-
-          .why-me-dropdown.active .why-me-dropdown__toggle-icon {
-            transform: rotate(45deg);
+          .why-me-dropdown__toggle:hover .why-me-dropdown__toggle-text {
+            color: #ffffff;
           }
 
           /* ВЫПАДАЮЩИЙ КОНТЕЙНЕР */
           .why-me-dropdown__list {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.6s ease;
+            transition: max-height 0.8s ease;
           }
 
           .why-me-dropdown.active .why-me-dropdown__list {
-            max-height: 4200px;
+            max-height: 5000px; /* Много места для 11 пунктов + кнопки */
           }
 
           /* ПОЛНОСТЬЮ СОХРАНЁННЫЙ ДИЗАЙН ПУНКТОВ */
@@ -214,7 +209,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
           .why-me__cta {
             text-align: center;
             margin-top: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
           }
 
           .why-me__btn {
@@ -239,10 +234,10 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
               padding: 70px 20px;
             }
             .why-me-dropdown__toggle-text {
-              font-size: 28px;
+              font-size: 24px;
             }
-            .why-me-dropdown__toggle-icon {
-              font-size: 36px;
+            .why-me-dropdown__toggle {
+              padding: 16px 20px;
             }
             .why-me__item {
               padding: 60px 0;
@@ -250,9 +245,8 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
             .why-me__number {
               font-size: 180px;
             }
-            .why-me__btn {
-              width: 100%;
-              max-width: 320px;
+            .why-me-dropdown.active .why-me-dropdown__list {
+              max-height: 6000px;
             }
           }
         </style>
@@ -260,13 +254,12 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
         <section class="why-me-dropdown">
           <div class="why-me-dropdown__container">
             
-            <!-- КЛИКАБЕЛЬНЫЙ ЗАГОЛОВОК "ПОЧЕМУ ВЫБИРАЮТ МЕНЯ" -->
+            <!-- КЛИКАБЕЛЬНАЯ КНОПКА (ВЕСЬ ЗАГОЛОВОК) -->
             <button class="why-me-dropdown__toggle">
               <span class="why-me-dropdown__toggle-text">Почему выбирают меня</span>
-              <span class="why-me-dropdown__toggle-icon">+</span>
             </button>
 
-            <!-- ВСЁ ВЫПАДАЕТ ВМЕСТЕ: ПУНКТЫ + КНОПКА -->
+            <!-- ВСЁ ВЫПАДАЕТ ВМЕСТЕ -->
             <div class="why-me-dropdown__list">
               
               <!-- 1 -->
@@ -406,8 +399,8 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </a>
               </div>
 
-            </div> <!-- закрытие why-me-dropdown__list -->
-          </div> <!-- закрытие container -->
+            </div>
+          </div>
         </section>
 
         <script>
