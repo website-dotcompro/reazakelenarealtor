@@ -126,32 +126,32 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
             margin: 0 auto;
           }
 
-          /* КЛИКАБЕЛЬНАЯ КНОПКА-ЗАГОЛОВОК */
+          /* КНОПКА-ЗАГОЛОВОК В СТИЛЕ ОСТАЛЬНЫХ КНОПОК */
           .why-me-dropdown__toggle {
             display: block;
             width: 100%;
-            padding: 20px 30px;
-            background: #ffffff;
-            border: 2px solid #a98b63;
-            border-radius: 60px;
+            padding: 18px 30px;
+            background: #a98b63; /* Золотой фон как у других кнопок */
+            border: none;
+            border-radius: 40px; /* Скругление как у других кнопок */
             cursor: pointer;
             margin-bottom: 40px;
             transition: all 0.3s ease;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(169, 139, 99, 0.1);
+            box-shadow: none;
           }
 
           .why-me-dropdown__toggle:hover {
-            background: #a98b63;
+            background: #9e8458; /* Чуть темнее при наведении */
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(169, 139, 99, 0.3);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.15);
           }
 
           .why-me-dropdown__toggle-text {
             font-size: 32px;
             font-weight: 600;
-            color: #1f1f1f;
-            transition: color 0.3s ease;
+            color: #ffffff; /* Белый текст как на других кнопках */
+            transition: all 0.3s ease;
           }
 
           .why-me-dropdown__toggle:hover .why-me-dropdown__toggle-text {
@@ -166,10 +166,10 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
           }
 
           .why-me-dropdown.active .why-me-dropdown__list {
-            max-height: 5000px; /* Много места для 11 пунктов + кнопки */
+            max-height: 5000px;
           }
 
-          /* ПОЛНОСТЬЮ СОХРАНЁННЫЙ ДИЗАЙН ПУНКТОВ */
+          /* ДИЗАЙН ПУНКТОВ С ЦИФРАМИ (ПОЛНОСТЬЮ СОХРАНЁН) */
           .why-me__item {
             position: relative;
             padding: 90px 0;
@@ -254,15 +254,15 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
         <section class="why-me-dropdown">
           <div class="why-me-dropdown__container">
             
-            <!-- КЛИКАБЕЛЬНАЯ КНОПКА (ВЕСЬ ЗАГОЛОВОК) -->
+            <!-- КНОПКА КАК НА ДРУГИХ КНОПКАХ САЙТА -->
             <button class="why-me-dropdown__toggle">
               <span class="why-me-dropdown__toggle-text">Почему выбирают меня</span>
             </button>
 
-            <!-- ВСЁ ВЫПАДАЕТ ВМЕСТЕ -->
+            <!-- ВСЁ ВЫПАДАЕТ -->
             <div class="why-me-dropdown__list">
               
-              <!-- 1 -->
+              <!-- 1-11 пункты (те же, что и были) -->
               <div class="why-me__item">
                 <div class="why-me__number">1</div>
                 <div class="why-me__content">
@@ -274,7 +274,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 2 -->
               <div class="why-me__item">
                 <div class="why-me__number">2</div>
                 <div class="why-me__content">
@@ -286,7 +285,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 3 -->
               <div class="why-me__item">
                 <div class="why-me__number">3</div>
                 <div class="why-me__content">
@@ -298,7 +296,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 4 -->
               <div class="why-me__item">
                 <div class="why-me__number">4</div>
                 <div class="why-me__content">
@@ -310,7 +307,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 5 -->
               <div class="why-me__item">
                 <div class="why-me__number">5</div>
                 <div class="why-me__content">
@@ -322,7 +318,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 6 -->
               <div class="why-me__item">
                 <div class="why-me__number">6</div>
                 <div class="why-me__content">
@@ -334,7 +329,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 7 -->
               <div class="why-me__item">
                 <div class="why-me__number">7</div>
                 <div class="why-me__content">
@@ -346,7 +340,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 8 -->
               <div class="why-me__item">
                 <div class="why-me__number">8</div>
                 <div class="why-me__content">
@@ -358,7 +351,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 9 -->
               <div class="why-me__item">
                 <div class="why-me__number">9</div>
                 <div class="why-me__content">
@@ -370,7 +362,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 10 -->
               <div class="why-me__item">
                 <div class="why-me__number">10</div>
                 <div class="why-me__content">
@@ -381,7 +372,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- 11 -->
               <div class="why-me__item">
                 <div class="why-me__number">11</div>
                 <div class="why-me__content">
@@ -392,7 +382,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
-              <!-- КНОПКА ВНУТРИ ВЫПАДАЮЩЕГО БЛОКА -->
+              <!-- КНОПКА ВНИЗУ -->
               <div class="why-me__cta">
                 <a href="https://t.me/rezakelena" class="why-me__btn">
                   Разобрать мою ситуацию
