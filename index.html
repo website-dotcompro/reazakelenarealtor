@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
         Елена Резак — ваш личный риелтор<br>
         в вопросах недвижимости
       </h1> <div class="hero-spacer"></div> <a href="https://t.me/rezakelena" class="hero-btn">Получить консультацию</a> </div> </section> </div> <!-- nominify end --> </div> </div> </div> </div><div id="rec1860527051" class="r t-rec" style=" " data-animationappear="off" data-record-type="131">
-  <!-- T123 -->
   <div class="t123">
     <div class="t-container_100 ">
       <div class="t-width t-width_100 ">
@@ -126,23 +125,25 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
             margin: 0 auto;
           }
 
-          /* КНОПКА-ЗАГОЛОВОК В СТИЛЕ ОСТАЛЬНЫХ КНОПОК */
+          /* КНОПКА-ЗАГОЛОВОК С ТЕКСТОМ И СТРЕЛКОЙ */
           .why-me-dropdown__toggle {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             width: 100%;
             padding: 18px 30px;
-            background: #a98b63; /* Золотой фон как у других кнопок */
+            background: #a98b63;
             border: none;
-            border-radius: 40px; /* Скругление как у других кнопок */
+            border-radius: 40px;
             cursor: pointer;
             margin-bottom: 40px;
             transition: all 0.3s ease;
-            text-align: center;
             box-shadow: none;
           }
 
           .why-me-dropdown__toggle:hover {
-            background: #9e8458; /* Чуть темнее при наведении */
+            background: #9e8458;
             transform: translateY(-2px);
             box-shadow: 0 10px 24px rgba(0,0,0,0.15);
           }
@@ -150,12 +151,26 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
           .why-me-dropdown__toggle-text {
             font-size: 32px;
             font-weight: 600;
-            color: #ffffff; /* Белый текст как на других кнопках */
-            transition: all 0.3s ease;
+            color: #ffffff;
+            line-height: 1.2;
           }
 
-          .why-me-dropdown__toggle:hover .why-me-dropdown__toggle-text {
-            color: #ffffff;
+          /* СТРЕЛКА ВНИЗ */
+          .why-me-dropdown__arrow {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.4s ease;
+          }
+
+          .why-me-dropdown__arrow svg {
+            width: 100%;
+            height: 100%;
+            fill: #ffffff;
+          }
+
+          /* ПОВОРОТ СТРЕЛКИ ПРИ ОТКРЫТОМ СПИСКЕ */
+          .why-me-dropdown.active .why-me-dropdown__arrow {
+            transform: rotate(180deg);
           }
 
           /* ВЫПАДАЮЩИЙ КОНТЕЙНЕР */
@@ -169,7 +184,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
             max-height: 5000px;
           }
 
-          /* ДИЗАЙН ПУНКТОВ С ЦИФРАМИ (ПОЛНОСТЬЮ СОХРАНЁН) */
+          /* ДИЗАЙН ПУНКТОВ С ЦИФРАМИ */
           .why-me__item {
             position: relative;
             padding: 90px 0;
@@ -234,10 +249,11 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
               padding: 70px 20px;
             }
             .why-me-dropdown__toggle-text {
-              font-size: 24px;
+              font-size: 22px;
             }
             .why-me-dropdown__toggle {
               padding: 16px 20px;
+              gap: 8px;
             }
             .why-me__item {
               padding: 60px 0;
@@ -254,15 +270,20 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
         <section class="why-me-dropdown">
           <div class="why-me-dropdown__container">
             
-            <!-- КНОПКА КАК НА ДРУГИХ КНОПКАХ САЙТА -->
+            <!-- КНОПКА С ТЕКСТОМ "Узнайте, почему меня выбирают" И СТРЕЛКОЙ -->
             <button class="why-me-dropdown__toggle">
-              <span class="why-me-dropdown__toggle-text">Почему выбирают меня</span>
+              <span class="why-me-dropdown__toggle-text">Узнайте, почему меня выбирают</span>
+              <span class="why-me-dropdown__arrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10L12 15L17 10H7Z" />
+                </svg>
+              </span>
             </button>
 
             <!-- ВСЁ ВЫПАДАЕТ -->
             <div class="why-me-dropdown__list">
               
-              <!-- 1-11 пункты (те же, что и были) -->
+              <!-- 1 -->
               <div class="why-me__item">
                 <div class="why-me__number">1</div>
                 <div class="why-me__content">
@@ -274,6 +295,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 2 -->
               <div class="why-me__item">
                 <div class="why-me__number">2</div>
                 <div class="why-me__content">
@@ -285,6 +307,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 3 -->
               <div class="why-me__item">
                 <div class="why-me__number">3</div>
                 <div class="why-me__content">
@@ -296,6 +319,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 4 -->
               <div class="why-me__item">
                 <div class="why-me__number">4</div>
                 <div class="why-me__content">
@@ -307,6 +331,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 5 -->
               <div class="why-me__item">
                 <div class="why-me__number">5</div>
                 <div class="why-me__content">
@@ -318,6 +343,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 6 -->
               <div class="why-me__item">
                 <div class="why-me__number">6</div>
                 <div class="why-me__content">
@@ -329,6 +355,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 7 -->
               <div class="why-me__item">
                 <div class="why-me__number">7</div>
                 <div class="why-me__content">
@@ -340,6 +367,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 8 -->
               <div class="why-me__item">
                 <div class="why-me__number">8</div>
                 <div class="why-me__content">
@@ -351,6 +379,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 9 -->
               <div class="why-me__item">
                 <div class="why-me__number">9</div>
                 <div class="why-me__content">
@@ -362,6 +391,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 10 -->
               <div class="why-me__item">
                 <div class="why-me__number">10</div>
                 <div class="why-me__content">
@@ -372,6 +402,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
                 </div>
               </div>
 
+              <!-- 11 -->
               <div class="why-me__item">
                 <div class="why-me__number">11</div>
                 <div class="why-me__content">
@@ -409,8 +440,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
       </div>
     </div>
   </div>
-</div>
-<div id="rec1859317051" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"> <!-- T123 --> <div class="t123"> <div class="t-container_100 "> <div class="t-width t-width_100 "> <!-- nominify begin --> <!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Резак Елена Николаевна</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <style>
+</div><div id="rec1859317051" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"> <!-- T123 --> <div class="t123"> <div class="t-container_100 "> <div class="t-width t-width_100 "> <!-- nominify begin --> <!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Резак Елена Николаевна</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <style>
 
 *{
 margin:0;
